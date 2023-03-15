@@ -20,4 +20,9 @@ class Window(QmainWindow):
 
         self.setWindowTitle("progams")
         self.setGeometry(400,400,600.300)
-    
+        self.text_data = QtWidgets.QLabel(self)
+        self.text_data.setText("Выберите дату")
+        self.text_data.adjustSize()
+        self.text_data.move(10,52)
+
+        
