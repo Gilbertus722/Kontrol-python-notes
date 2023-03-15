@@ -25,4 +25,8 @@ class Window(QmainWindow):
         self.text_data.adjustSize()
         self.text_data.move(10,52)
 
+        self.time=QtWidgets.QTimeEdit(self)
+        self.time.move(100.100)
+        self.time.adjustSize()
+
         
