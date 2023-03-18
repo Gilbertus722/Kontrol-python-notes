@@ -44,6 +44,9 @@ class Window(QmainWindow):
         self.knopka.move(210,80)
         self.knopka.setText('Подтвердить')
         self.knopkaadjustSize()
+        self.timer=QTimer()
+        self.timer.timeout.connect(self.proverka)
+        self.timer.start(5000)
 
     def knopka_gotovo(self):
         data_txt=str(self.data.text)
