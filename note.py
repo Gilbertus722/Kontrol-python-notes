@@ -98,7 +98,28 @@ for line in lines:
         self.error.setStandardButtons(self.error.Ok|self.error.Cancel)
         self.error.exec_()
 
-        
+    if dateTime_pk in line:
+
+        index_dateTime = lines.index(line)
+        del lines[index_dateTime]
+
+        text = line[20::]
+
+        self.error = QtWidgets.QMessageBox(self)
+        self.error.setWindowTitle("Напоминаю")
+        self.error.setText(text)
+        self.error.setIcon(QtWidgets.QMessageBox.Warning)
+        self.error.setStandardButtons(self.error.Ok|self.error.Cancel)
+        self.error.exec_()
+
+File_R - open("dateTime.txt", "w")
+for i in lines:
+    File_R.write(i + '\n')
+File_R.close()
+
+
+
+
 
 
         
