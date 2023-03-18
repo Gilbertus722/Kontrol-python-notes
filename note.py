@@ -29,6 +29,7 @@ class Window(QmainWindow):
         self.time=QtWidgets.QTimeEdit(self)
         self.time.move(100.100)
         self.time.adjustSize()
+        self.knopka.clicked.connect(self.knopka_gotovo)
 
         self.time=QtWidgets.QTimeEdit(self)
         self.time.move(110,100)
@@ -57,6 +58,7 @@ class Window(QmainWindow):
         File_A.write(DataTime_txt+ '\n')
         File_A.write(Data_txt + '\n')
         File_A.close()
+
 
 
 
