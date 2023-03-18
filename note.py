@@ -1,3 +1,4 @@
+
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QmainWindow, QMessageBox
 from PyQt5.QtCore import Qt, QTimer
@@ -42,5 +43,15 @@ class Window(QmainWindow):
         self.knopka.move(210,80)
         self.knopka.setText('Подтвердить')
         self.knopkaadjustSize()
+
+    def knopka_gotovo(self):
+        data_txt=str(self.data.text)
+        time_txt=str(self.time.text())
+        sobati_text=str(self.sobati.text)
+        print("Дата: "+data_text)
+        print("Время: "+time_text)
+        print("Событие: "+sobati_txt)
         
+
+
         
