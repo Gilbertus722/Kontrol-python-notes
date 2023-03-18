@@ -38,5 +38,9 @@ class Window(QmainWindow):
         self.sobati.adjustSixe()
         self.sobati.setPlaceholderText('Введите событие')
 
+        self.knopka = QtWidgets.QPushButton(self)
+        self.knopka.move(210,80)
+        self.knopka.setText('Подтвердить')
+        self.knopkaadjustSize()
         
         
