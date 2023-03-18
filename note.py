@@ -51,7 +51,13 @@ class Window(QmainWindow):
         print("Дата: "+data_text)
         print("Время: "+time_text)
         print("Событие: "+sobati_txt)
-        
+        File_A = open('dataTime.txt','a+')
+        DataTime_txt = (data_txt + " ' "+ time_txt +" ' "+ sobati_text)
+        Data_txt = (data_txt + " ' time ' "+ sobati_text)
+        File_A.write(DataTime_txt+ '\n')
+        File_A.write(Data_txt + '\n')
+        File_A.close()
+
 
 
         
