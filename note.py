@@ -29,4 +29,14 @@ class Window(QmainWindow):
         self.time.move(100.100)
         self.time.adjustSize()
 
+        self.time=QtWidgets.QTimeEdit(self)
+        self.time.move(110,100)
+        self.time.adjustSize()
+
+        self.sobati = QtWidgets.QLineEdit(self)
+        self.sobati.setGeometry(100,150,160,30)
+        self.sobati.adjustSixe()
+        self.sobati.setPlaceholderText('Введите событие')
+
+        
         
