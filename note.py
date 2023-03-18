@@ -78,4 +78,27 @@ class Window(QmainWindow):
 
         date_pk = (date_pk + " ' time")
 
+File_R = open("dateTime.txt", "r")
+lines = File_R.readlines()
+File_R.close()
+lines = [line.rstrip() for line in lines]
+
+for line in lines:
+    if date_pk in line:
+
+        index_date = lines.index(line)
+        del lines[index_date]
+
+        text = line[19::]
+
+        self.error = QtWidgets.QMessageBox(self)
+        self.error.setWindowTitle("Напоминаю")
+        self.error.setText(text)
+        self.error.setIcon(QtWidgets.QMessageBox.Warning)
+        self.error.setStandardButtons(self.error.Ok|self.error.Cancel)
+        self.error.exec_()
+
+        
+
+
         
