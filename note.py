@@ -59,7 +59,23 @@ class Window(QmainWindow):
         File_A.write(Data_txt + '\n')
         File_A.close()
 
+    def proverka(self):
 
+        date_pk = datetime.date.today()
+        time_pk = datetime.datetime.now().time()
+        date_pk = str(date_pk)
+        time_pk = str(time_pk)
+        one = date_pk[:4:]
+        two = date_pk[8::]
+        date_pk = date_pk[4:8:]
+        date_pk (two + date_pk +one)
+        date_pk = date_pk.replace('-','.')
 
+        time_pk = time_pk[:5:]
+
+        dateTime_pk = (date_pk + " ' " + time_pk )
+        print(dateTime_pk+ " = Текущее дата и время")
+
+        date_pk = (date_pk + " ' time")
 
         
